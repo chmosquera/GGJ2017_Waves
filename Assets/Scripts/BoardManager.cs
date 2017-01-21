@@ -82,6 +82,9 @@ public class BoardManager : MonoBehaviour {
 				// Not corner or wall? randTile should be an innerTile
 				else
 					randTile = innerTiles[Random.Range (0, innerTiles.Length)];
+
+				// Place the randTile on the current location
+
 			}
 		}
 	}

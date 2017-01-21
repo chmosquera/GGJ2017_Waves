@@ -13,20 +13,15 @@ public class Movement : MonoBehaviour
 	[SerializeField] public float speed;
 	private Rigidbody2D rb;
 	//private Vector3 movement;
-	private string flip; // UP, DOWN, LEFT, RIGHT
 
 	void Start() {
 		rb = GetComponent<Rigidbody2D> ();
-		flip = "RIGHT";
 	}
 
 	void FixedUpdate ()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-
-		Debug.Log ("h = " + moveHorizontal);
-		Debug.Log ("v = " + moveVertical);
 
 		HandleMovement (moveHorizontal, moveVertical);
 		transform.up = rb.velocity;
