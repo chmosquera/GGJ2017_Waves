@@ -22,9 +22,10 @@ GameObject:
   - 58: {fileID: 58000013920572020}
   - 114: {fileID: 114000010706757146}
   - 212: {fileID: 212000013935848968}
+  - 114: {fileID: 114000013196867962}
   m_Layer: 0
   m_Name: ShockWave
-  m_TagString: ShackWave
+  m_TagString: ShockWave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,6 +66,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd0acff18eeadc4893df47b776192fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 50
+  pulseSize: 0
+  lightTrans: {fileID: 0}
+  pulseMax: 40
+--- !u!114 &114000013196867962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011901328730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c598b33a5eb8a4d48a1c5f1279a105c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pulseSpeed: 50

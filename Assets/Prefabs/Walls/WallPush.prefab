@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000012830382500}
   - 50: {fileID: 50000011043557614}
   - 61: {fileID: 61000012076588562}
-  - 114: {fileID: 114000012998340196}
+  - 114: {fileID: 114000013862247102}
   m_Layer: 0
   m_Name: WallPush
   m_TagString: Untagged
@@ -55,7 +55,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
---- !u!114 &114000012998340196
+--- !u!114 &114000013862247102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,11 +82,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013193930208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072bc8cc778f3b54080bae41ea103d82, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b0356bf0488ade4cb8a0898a66e8b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visRate: 2
   visTime: 1
-  endOfVisTime: 0
+  revealTag: LightWave
 --- !u!212 &212000012830382500
 SpriteRenderer:
   m_ObjectHideFlags: 1

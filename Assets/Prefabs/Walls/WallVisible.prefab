@@ -22,7 +22,7 @@ GameObject:
   - 212: {fileID: 212000013634526172}
   - 50: {fileID: 50000012881932362}
   - 61: {fileID: 61000013903758076}
-  - 114: {fileID: 114000013061198664}
+  - 114: {fileID: 114000010045789150}
   m_Layer: 0
   m_Name: WallVisible
   m_TagString: Untagged
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
---- !u!114 &114000013061198664
+--- !u!114 &114000010045789150
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,11 +82,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010430183178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072bc8cc778f3b54080bae41ea103d82, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b0356bf0488ade4cb8a0898a66e8b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visRate: 2
   visTime: 1
-  endOfVisTime: 0
+  revealTag: LightWave
 --- !u!212 &212000013634526172
 SpriteRenderer:
   m_ObjectHideFlags: 1

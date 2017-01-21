@@ -22,6 +22,7 @@ GameObject:
   - 58: {fileID: 58000010204747556}
   - 114: {fileID: 114000013139556996}
   - 212: {fileID: 212000010762208966}
+  - 114: {fileID: 114000012828479364}
   m_Layer: 0
   m_Name: LightWave
   m_TagString: LightWave
@@ -56,6 +57,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &114000012828479364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013503834116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c598b33a5eb8a4d48a1c5f1279a105c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 50
 --- !u!114 &114000013139556996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseSpeed: 50
+  pulseSize: 0
+  lightTrans: {fileID: 0}
+  pulseMax: 40
 --- !u!212 &212000010762208966
 SpriteRenderer:
   m_ObjectHideFlags: 1

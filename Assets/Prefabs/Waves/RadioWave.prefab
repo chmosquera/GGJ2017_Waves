@@ -22,6 +22,7 @@ GameObject:
   - 58: {fileID: 58000011135321944}
   - 114: {fileID: 114000012245352980}
   - 212: {fileID: 212000010778058688}
+  - 114: {fileID: 114000011061709720}
   m_Layer: 0
   m_Name: RadioWave
   m_TagString: RadioWave
@@ -56,6 +57,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &114000011061709720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010410973104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c598b33a5eb8a4d48a1c5f1279a105c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 50
 --- !u!114 &114000012245352980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulseSpeed: 50
+  pulseSize: 0
+  lightTrans: {fileID: 0}
+  pulseMax: 40
 --- !u!212 &212000010778058688
 SpriteRenderer:
   m_ObjectHideFlags: 1
