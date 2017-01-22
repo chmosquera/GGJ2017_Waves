@@ -16,8 +16,8 @@ public class BoardManager : MonoBehaviour {
 		}
 	}
 
-	[SerializeField] public int rows = 5;
-	[SerializeField] public int cols = 5;
+	[SerializeField] public int rows;
+	[SerializeField] public int cols;
 
 
 	// Background Layout

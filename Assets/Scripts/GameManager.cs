@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void InitGame() {
-		board.SetupScene();
 		width = board.cols;
 		height = board.rows;
-	}
+        board.SetupScene();
+    }
 
 	// Update is called once per frame
 	void Update () {
