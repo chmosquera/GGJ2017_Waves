@@ -12,7 +12,7 @@ public class SwitchActivation : MonoBehaviour {
     {
         sprRend = gameObject.GetComponent<SpriteRenderer>();
         activated = false;
-        sprRend.color = Color.red;
+        sprRend.color = Color.white;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -26,7 +26,7 @@ public class SwitchActivation : MonoBehaviour {
             }
             else
             {
-                sprRend.color = Color.red;
+                sprRend.color = Color.white;
             }
         }
     }
