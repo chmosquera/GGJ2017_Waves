@@ -21,7 +21,6 @@ public class BoardManager : MonoBehaviour {
 
 
 	// Background Layout
-	private int innerTileCount;
 	public GameObject[] innerTiles;
 	public GameObject[] wallTilesUP;
 	public GameObject[] wallTilesRIGHT;
@@ -31,12 +30,6 @@ public class BoardManager : MonoBehaviour {
 
 	private Transform boardHolder; // child all board objects to this, use it to clean everything at end
 	private List <Vector3> gridPositions = new List<Vector3>();
-
-
-	// Use this for initialization
-	void Start () {
-		innerTileCount = (rows - 2) * (cols - 2);
-	}
 	
 	// Update is called once per frame
 	void Update () {

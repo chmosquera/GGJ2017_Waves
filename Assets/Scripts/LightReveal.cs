@@ -6,7 +6,6 @@ public class LightReveal : MonoBehaviour {
     public float endOfVisTime;
     
     private SpriteRenderer sprRnd;
-    private bool visible = false;
     private float timeFactor;
 
     // Use this for initialization

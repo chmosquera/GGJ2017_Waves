@@ -19,7 +19,7 @@ public class PulseEmitter : MonoBehaviour {
         currentWave = waveTypes[0];
         chargeSlider.value = 0;
         waveNum = 0; 
-        chargeColorFull = chargeColorFull = currentWave.gameObject.GetComponent<SpriteRenderer>().color;
+        chargeColorFull = currentWave.gameObject.GetComponent<SpriteRenderer>().color;
     }
 
 	// Update is called once per frame
