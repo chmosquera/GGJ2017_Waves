@@ -18,7 +18,10 @@ public class BoardManager : MonoBehaviour {
 
 	[SerializeField] public int rows = 5;
 	[SerializeField] public int cols = 5;
-	public int innerTileCount;
+
+
+	// Background Layout
+	private int innerTileCount;
 	public GameObject[] innerTiles;
 	public GameObject[] wallTilesUP;
 	public GameObject[] wallTilesRIGHT;
@@ -58,7 +61,7 @@ public class BoardManager : MonoBehaviour {
 
 		for (int x = 0; x <= cols; x++) {
 			for (int y = 0; y <= rows; y++) {
-				GameObject randTile = innerTiles [Random.Range (0, innerTiles.Length)];
+				GameObject randTile;
 
 				// Check if at a corner
 				if (x == 0 && y == rows) 			// Upper-Left Corner
@@ -84,9 +87,15 @@ public class BoardManager : MonoBehaviour {
 					randTile = innerTiles[Random.Range (0, innerTiles.Length)];
 
 				// Place the randTile on the current location
+				GameObject tile = Instantiate(randTile, new Vector3(x,y,0f), Quaternion.identity, boardHolder) as GameObject;
 
 			}
 		}
 	}
-	// I THINK IM NOT GONNA DO CORNERS ANYMORE. wE WILL JUST HAE WALLS!
+
+
+	public void SetupScene() {
+
+		BoardSetup ();
+	}
 }
