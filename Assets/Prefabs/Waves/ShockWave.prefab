@@ -22,7 +22,7 @@ GameObject:
   - 58: {fileID: 58000013920572020}
   - 114: {fileID: 114000010706757146}
   - 212: {fileID: 212000013935848968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShockWave
   m_TagString: ShockWave
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -67,7 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0e44e6f6860314bb88a4ae2a3d3719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseSpeed: 50
+  pulseSpeed: 20
+  pulseMax: 10
 --- !u!212 &212000013935848968
 SpriteRenderer:
   m_ObjectHideFlags: 1

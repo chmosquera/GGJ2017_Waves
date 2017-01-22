@@ -7,7 +7,7 @@ public class Pulse : MonoBehaviour {
     public float pulseSpeed = .01f;
     private float pulseSize= 0;
     private Transform trans; //transofrm of the light ring
-    private int pulseMax = 40;
+    public int pulseMax = 40;
 
     // Use this for initialization
     void Start() {

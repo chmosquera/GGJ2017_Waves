@@ -130,7 +130,7 @@ Camera:
     height: 1
   near clip plane: 3.17
   far clip plane: 5.9
-  field of view: 36.8
+  field of view: 45
   orthographic: 0
   orthographic size: 1
   m_Depth: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -198,14 +198,14 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0aca5559f8031b4eb546bdd8d5b4ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 5
-  cols: 5
+  rows: 30
+  cols: 40
   innerTiles:
   - {fileID: 1000013176521818, guid: 575b5572023ebf247abd2f95db6796ab, type: 2}
   - {fileID: 1000012120363780, guid: 36e89f0857b894744a2641b76f669ae9, type: 2}
@@ -385,6 +385,6 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.881, y: -194.95013}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -316, y: -193}
+  m_SizeDelta: {x: 117, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}

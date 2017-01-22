@@ -22,7 +22,7 @@ GameObject:
   - 58: {fileID: 58000011135321944}
   - 114: {fileID: 114000012245352980}
   - 212: {fileID: 212000010778058688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RadioWave
   m_TagString: RadioWave
   m_Icon: {fileID: 0}
@@ -67,7 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0e44e6f6860314bb88a4ae2a3d3719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pulseSpeed: 50
+  pulseSpeed: 20
+  pulseMax: 10
 --- !u!212 &212000010778058688
 SpriteRenderer:
   m_ObjectHideFlags: 1
