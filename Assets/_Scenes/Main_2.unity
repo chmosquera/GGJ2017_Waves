@@ -194,7 +194,7 @@ Prefab:
     - target: {fileID: 114000012340312456, guid: 93f8626a97c597c48bbcc146a9733d5a,
         type: 2}
       propertyPath: width
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114000012340312456, guid: 93f8626a97c597c48bbcc146a9733d5a,
         type: 2}
