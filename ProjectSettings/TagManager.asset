@@ -8,6 +8,7 @@ TagManager:
   - ShockWave
   - SoundWave
   - RadioWave
+  - Collectible
   layers:
   - Default
   - TransparentFX
