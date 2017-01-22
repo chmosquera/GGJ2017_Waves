@@ -11,6 +11,7 @@ public class Reveal : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
+		Debug.Log (gameObject.name);
         sprRnd = gameObject.GetComponent<SpriteRenderer>();
         sprRnd.enabled = false;
         timeFactor = 0;
@@ -28,7 +29,7 @@ public class Reveal : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag(revealTag))
         {

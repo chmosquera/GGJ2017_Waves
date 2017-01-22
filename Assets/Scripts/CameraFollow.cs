@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour {
 	private GameManager gameManager;
 
 	private Transform target;
+	[SerializeField] string playerTag;
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +33,10 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		// transforms the position of the camera to the position of the player
-		transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin, xMax), // Clamps values between max/min
-										 Mathf.Clamp(target.position.y, yMin, yMax), 
-										 transform.position.z);
+		if (GameObject.FindGameObjectWithTag(playerTag)) {
+			transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin, xMax), // Clamps values between max/min
+											 Mathf.Clamp(target.position.y, yMin, yMax), 
+											 transform.position.z);
+		}
 	}
 }

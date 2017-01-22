@@ -6,10 +6,13 @@ public class GameManager : MonoBehaviour {
 	//public static GameManager instance = null;
 	private BoardManager board;
 	public int width, height;
+	public bool gameOver =  false;
+	public int keyFragments;
 
 	// Use this for initialization
 	void Awake () {
 
+		// May  need this for future levels
 		/*
 		// This makes sure that there is only one game manager
 		if (instance == null)
@@ -19,7 +22,7 @@ public class GameManager : MonoBehaviour {
 		*/
 
 		board = GetComponent<BoardManager> ();
-
+		keyFragments = 0;
 		InitGame ();
 
 	}
@@ -32,6 +35,6 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }
