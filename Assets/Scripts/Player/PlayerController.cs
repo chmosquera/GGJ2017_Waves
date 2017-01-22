@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-/*
-[System.Serializable]
-public class Boundary
-{
-	public float xMin, xMax, yMin, yMax;
-}
-*/
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +11,10 @@ public class PlayerController : MonoBehaviour
     //private Vector3 movement;
 
     private int keyFragments;
+
+	private Animator animator;
+	private SpriteRenderer spr;
+	private bool facingRight;
     
     void Awake()
     {
@@ -24,7 +22,10 @@ public class PlayerController : MonoBehaviour
     }
 	void Start() {
 		rb = GetComponent<Rigidbody2D> ();
+		animator = GetComponent<Animator> ();
+		spr = GetComponent<SpriteRenderer> ();
         keyFragments = 0;
+
 	}
 
     void Update()
@@ -41,18 +42,41 @@ public class PlayerController : MonoBehaviour
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		HandleMovement (moveHorizontal, moveVertical);
-		//transform.up = rb.velocity;
 
-		//rb.rotation = (float)Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
 	}
 
 	private void HandleMovement(float horizontal, float vertical) {
 
-		//movement.Set (horizontal, vertical, 0.0f);
-		//movement = movement.normalized * speed * Time.deltaTime;
-		//rb.MovePosition = transform.position + movement;
-
 		rb.velocity = new Vector2 (horizontal * speed, vertical * speed);
+		//Debug.Log ("velocity.x = " + rb.velocity.x);
+		Debug.Log ("velocity.y = " + rb.velocity.y);
+
+		// Deals with Animation
+		/*
+		if (rb.velocity.x < 0 || rb.velocity.y == 0) {
+			facingRight = true;
+		} else if (rb.velocity.x > 0 || rb.velocity.y == 0) {
+			facingRight = false;
+		} else if (rb.velocity 
+		*/
+
+		float angle = Vector2.Angle (rb.velocity, Vector2.right);
+		Debug.Log ("angle = " + angle);
+
+
+		if (angle >= 45 && angle <= 135 && rb.velocity.y > 0) { 
+			animator.SetInteger ("direction", 1); // direction = UP (1)
+		} else if (angle < 45) {
+			spr.flipX = true;
+			animator.SetInteger ("direction", 2); // direction = RIGHT (2)
+		} else if (angle >= 45 && angle <= 135 && rb.velocity.y <= 0) {
+			animator.SetInteger ("direction", 3); // direction = DOWN (3)
+		} else if (angle > 135) {
+			spr.flipX = false;
+			animator.SetInteger ("direction", 2); // direction = LEFT (2)
+		}
+
+
 	}
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -66,5 +90,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+	public void Flip() {
+
+	}
 
 }
