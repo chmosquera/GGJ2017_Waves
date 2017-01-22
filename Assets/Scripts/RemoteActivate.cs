@@ -4,9 +4,27 @@ using System.Collections;
 public class RemoteActivate : MonoBehaviour {
 
     public SwitchActivation toggle;
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public float speed;
+    public Vector3 movement;
+
+    private Vector3 originalPos;  
+
+    void Start()
+    {
+        originalPos = gameObject.transform.position;
+    }
+
+	void Update()
+    {
+        if (toggle.IsActivated() && transform.position.y <= (originalPos + movement).y)
+        {
+            transform.position += movement * speed * Time.deltaTime;
+            if (transform.position.y >= (originalPos + movement).y) { transform.position = originalPos + movement; }
+        }
+        if (!(toggle.IsActivated()) && transform.position.y >= originalPos.y)
+        {
+            transform.position -= movement * speed * Time.deltaTime;
+            if (transform.position.y < originalPos.y) { transform.position = originalPos; }
+        }
+    }
 }

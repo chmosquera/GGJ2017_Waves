@@ -30,4 +30,9 @@ public class SwitchActivation : MonoBehaviour {
             }
         }
     }
+
+    public bool IsActivated()
+    {
+        return activated;
+    }
 }

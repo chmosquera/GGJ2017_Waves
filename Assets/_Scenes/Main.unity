@@ -5277,12 +5277,12 @@ Prefab:
     - target: {fileID: 224000013081992406, guid: eb7ab907cb6e396429056eb274219c9d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224000013081992406, guid: eb7ab907cb6e396429056eb274219c9d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000013309475712, guid: eb7ab907cb6e396429056eb274219c9d,
         type: 2}
@@ -6715,7 +6715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c616e10d58c304c9dfafbbb58012c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggle: {fileID: 0}
+  toggle: {fileID: 2019167876}
+  speed: 5
+  movement: {x: 0, y: 2, z: 0}
 --- !u!4 &1613931439 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013270649606, guid: e80e9797f6d67eb4993ec8a598a44c66,
@@ -7099,7 +7101,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013809050166, guid: 93f8626a97c597c48bbcc146a9733d5a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000013809050166, guid: 93f8626a97c597c48bbcc146a9733d5a, type: 2}
       propertyPath: m_Icon
@@ -9072,6 +9074,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80e9797f6d67eb4993ec8a598a44c66, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2019167876 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010043278164, guid: 440cd6676d04e414283dc50de2c7c46f,
+    type: 2}
+  m_PrefabInternal: {fileID: 693986994}
+  m_Script: {fileID: 11500000, guid: 82699f5482cc4ce498733eda13019e8e, type: 3}
 --- !u!1001 &2024020962
 Prefab:
   m_ObjectHideFlags: 0
