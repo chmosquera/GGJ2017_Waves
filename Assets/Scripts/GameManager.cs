@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour {
 	public int width, height;
 	public bool gameOver =  false;
 	public int keyFragments;
+	public int totalKeys;
+	public string keyTag = "Collectible";
+	public bool doorUnlocked = false;
 
 	// Use this for initialization
 	void Awake () {
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour {
 
 		board = GetComponent<BoardManager> ();
 		keyFragments = 0;
+		totalKeys = GameObject.FindGameObjectsWithTag (keyTag).Length;
 		InitGame ();
 
 	}
@@ -34,7 +38,19 @@ public class GameManager : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
+		// checks if enough keys to unlock door
+		if (keyFragments == totalKeys) {
+			doorUnlocked = true;
+			Debug.Log ("Door has been unlocked");
+		}
+
+		// able to unlock door
+
+	}
+
+	public void GameWon() {
+			
 	}
 }

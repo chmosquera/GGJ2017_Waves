@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
 
 	private Animator animator;
 	private SpriteRenderer spr;
-    
+
+
     void Awake()
     {
         keyFragText.text = "";
@@ -41,11 +42,14 @@ public class PlayerController : MonoBehaviour
 
 		HandleMovement (moveHorizontal, moveVertical);
 
+
 	}
 
 	private void HandleMovement(float horizontal, float vertical) {
 
 		rb.velocity = new Vector2 (horizontal * speed, vertical * speed);
+
+		//Debug.Log ("speed = " + rb.velocity);
 
 		float angle = Vector2.Angle (rb.velocity, Vector2.right);
 
@@ -64,16 +68,25 @@ public class PlayerController : MonoBehaviour
 
 	}
 
-    public void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+		Debug.Log ("ontrigger");
         if (other.gameObject.CompareTag("Collectible"))
         {
-            Destroy(other.gameObject);
-            if (gameManager.keyFragments < 3)
-            {
-                gameManager.keyFragments += 1;
-            }
+			Debug.Log ("Found a key!");
+			//if (Input.GetKeyDown (KeyCode.CapsLock)) {	
+				Debug.Log ("Destroy key");
+				Destroy (other.gameObject);
+				if (gameManager.keyFragments < 3) {
+					gameManager.keyFragments += 1;
+				}
+			//}
         }
+		if (other.gameObject.CompareTag ("Finish")) {
+			if (gameManager.doorUnlocked && Input.GetKeyDown (KeyCode.E)) {
+				gameManager.GameWon();
+			}
+		}
     }
 
 	public void Explode() {
@@ -84,5 +97,6 @@ public class PlayerController : MonoBehaviour
 		gameManager.gameOver = true;
 		Destroy(gameObject, 50 * Time.fixedDeltaTime);
 	}
+
 
 }
