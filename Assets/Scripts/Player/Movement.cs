@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		HandleMovement (moveHorizontal, moveVertical);
-		transform.up = rb.velocity;
+		//transform.up = rb.velocity;
 
 		//rb.rotation = (float)Quaternion.Euler (0.0f, 0.0f, GetComponent<Rigidbody>().velocity.x * -tilt);
 	}
