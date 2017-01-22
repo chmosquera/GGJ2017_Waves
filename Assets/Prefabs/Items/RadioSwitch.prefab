@@ -21,8 +21,8 @@ GameObject:
   - 4: {fileID: 4000013250679988}
   - 50: {fileID: 50000010792103968}
   - 212: {fileID: 212000013247139136}
-  - 58: {fileID: 58000014239991310}
   - 114: {fileID: 114000010043278164}
+  - 58: {fileID: 58000013943247942}
   m_Layer: 0
   m_Name: RadioSwitch
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58000014239991310
+--- !u!58 &58000013943247942
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -69,11 +69,11 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.25
 --- !u!114 &114000010043278164
 MonoBehaviour:
   m_ObjectHideFlags: 1
