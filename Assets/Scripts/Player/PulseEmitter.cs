@@ -30,7 +30,7 @@ public class PulseEmitter : MonoBehaviour {
 
 	    if (Input.GetKeyDown(KeyCode.Space) && chargeSlider.value == 100)
         {
-            Object.Instantiate(currentWave, transform.position, Quaternion.identity);
+            GameObject.Instantiate(currentWave, transform.position, Quaternion.identity);
             chargeSlider.value = 0;
         }
 
