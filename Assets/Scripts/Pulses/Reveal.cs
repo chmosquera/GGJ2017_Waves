@@ -11,7 +11,7 @@ public class Reveal : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-		Debug.Log (gameObject.name);
+
         sprRnd = gameObject.GetComponent<SpriteRenderer>();
         sprRnd.enabled = false;
         timeFactor = 0;

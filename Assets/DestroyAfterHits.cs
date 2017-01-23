@@ -8,14 +8,15 @@ public class DestroyAfterHits : MonoBehaviour {
 
     private int hitCount = 0;
 
-    void OnTriggerEnter(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag(revealTag))
         {
+            Debug.Log("Hit");
             hitCount++;
             if (hitCount == 3)
             {
-                Instantiate(drop, transform);
+                Object.Instantiate(drop, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
